@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Calling Function From HTML</title>
+
+</head>
+<link rel="stylesheet" href="css/main.css">
+<body style="overflow-x: scroll;">
+    <h1>Работа с метриками</h1>
+    <div class="container">
+        <div class='item item_1'>
+            <br>
+            <div class=textMiddle>clientTop и clientLeft</div>
+            <br>
+            <div id='clGran' class=text></div>
+            <br>          
+            <div class="elem" id="elem">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="clTop()">Толщина верхней границы</button>
+            <br>
+            <button type="submit" class=btn onclick="clLeft()">Толщина левой границы</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>offsetHeight и offsetWidth</div>
+            <br>
+            <div id='clRazm' class=text></div>
+            <br>          
+            <div class="elem" id="elem1">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="razmTop()">Полная высота</button>
+            <br>
+            <button type="submit" class=btn onclick="razmLeft()">Полная ширина</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>clientHeight и clientWidth</div>
+            <br>
+            <div id='clRazmIn' class=text></div>
+            <br>          
+            <div class="elem" id="elem2">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="razmTopIn()">Высота с отступами</button>
+            <br>
+            <button type="submit" class=btn onclick="razmLeftIn()">Ширина с отступами</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>getComputedStyle</div>
+            <br>
+            <div id='razmAll' class=text></div>
+            <br>          
+            <div class="elem" id="elem3">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="razmAll()">Ширина и высота</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle></div>
+            <br>
+            <div class=text id="uvel">Не решено</div>
+            <br>          
+            <div class="elem1" id="elem20"></div>
+            <br>
+            <button type="submit" class=btn onclick="uvel()">Увеличить ширину и высоту</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>clientHeight</div>
+            <br>
+            <div class=text id="rasmBr"></div>
+            <br>          
+            <button type="submit" class=btn onclick="rasmBr()">Показать высоту окна браузера</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollTo</div>
+            <br>
+            <div class=text id="strNis"></div>
+            <br>          
+            <button type="submit" class=btn onclick="strNis()">Прокрутить страницу до низа</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>style.overflow</div>
+            <br>
+            <div class=text id="vertPr"></div>
+            <br>          
+            <button type="submit" class=btn onclick="vertPr()">Проверить вертикальную прокрутку</button>
+            <br>
+            <hr>
+        </div>
+        <div class='item item_1'>
+            <br>
+            <div class=textMiddle>scrollTop</div>
+            <br>
+            <div id='krutTop' class=text></div>
+            <br>          
+            <div class="elem" id="elem4">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="krutTop()">Величина прокрутки элемента</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollLeft</div>
+            <br>
+            <div id='krutLeft' class=text></div>
+            <br>          
+            <div class="elem" id="elem5" style="overflow-x: scroll;">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="krutLeft()">Величина прокрутки элемента</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollTop</div>
+            <br>
+            <div id='krutLeft' class=text></div>
+            <br>          
+            <div class="elem" id="elem6">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="prokrut()">Выставить на 100 px</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollTop</div>
+            <br>
+            <div id='krut100' class=text></div>
+            <br>          
+            <div class="elem" id="elem7">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="prokrutPlus()">Прокрутить на 100 px</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollHeight</div>
+            <br>
+            <div id='prokrutHeight' class=text>Высота элемента с учетом прокрутки</div>
+            <br>          
+            <div class="elem" id="elem8">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="prokrutHeight()">Показать высоту элемента</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollWidth</div>
+            <br>
+            <div id='prokrutWidth' class=text>Ширина элемента с учетом прокрутки</div>
+            <br>          
+            <div class="elem" id="elem9" style="overflow-x: scroll;">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="prokrutWidth()">Показать ширину элемента</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollTop, scrollHeight</div>
+            <br>
+            <div class=text id="ustHeight"></div>
+            <br>          
+            <div class="elem" id="elem10">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="ustHeight()">Выставить на 300 px снизу</button>
+            <br>
+            <hr>
+
+        </div>
+
+        <div class='item item_1'>
+            <br>
+            <div class=textMiddle>pageYOffset</div>
+            <br>
+            <div class=text id="yBody"></div>
+            <br>          
+            <div class="elem" id="elem11">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="yBody()">Величина прокрутки страницы</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>pageHOffset</div>
+            <br>
+            <div class=text id="xBody"></div>
+            <br>          
+            <div class="elem" id="elem12">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="xBody()">Величина прокрутки страницы</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollTo</div>
+            <br>
+            <div class=text></div>
+            <br>          
+            <div class="elem" id="elem13">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="toBody()">Выставить страницу на 300х и 500у</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollBy</div>
+            <br>
+            <div class=text id="prokrBody"></div>
+            <br>          
+            <div class="elem" id="elem14">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="prokrBody()">Прокрутить страницу на 300</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollTo</div>
+            <br>
+            <div class=text></div>
+            <br>          
+            <div class="elem" id="elem15">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="prokrNis()">Прокрутить страницу до низу</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollBy</div>
+            <br>
+            <div class=text id="prokrBody1"></div>
+            <br>          
+            <div class="elem" id="elem16">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="prokrBody1()">Прокрутить страницу на 400</button>
+            <br>
+            <hr>
+            <br>
+            <div class=textMiddle>scrollBy</div>
+            <br>
+            <div class=text id="prokrVar">Не решено</div>
+            <br>          
+            <div class="elem" id="elem17">Выравнивание текста определяет его внешний вид и ориентацию краев абзаца и может выполняться по левому краю, правому краю, по центру или по ширине. В табл. 1 показаны варианты выравнивания блока</div>
+            <br>
+            <button type="submit" class=btn onclick="prokrVar()">Прокрутить страницу до 100</button>
+            <br>
+            <hr>
+        </div>
+     
+
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
